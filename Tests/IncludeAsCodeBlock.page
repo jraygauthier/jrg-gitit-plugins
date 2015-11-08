@@ -1,0 +1,27 @@
+Absolute
+========
+
+~~~{.md include-code="/Tests/Maths.page"}
+Test include Maths.page using absolute URL.
+~~~
+
+Relative
+========
+
+~~~{.md include-code="Maths.page"}
+Test include Maths.page using relative URL.
+~~~
+
+Including self
+==============
+
+~~~{.md include-code="IncludeAsCodeBlock.page"}
+Test include self.
+~~~
+
+Including PlantUML
+==================
+
+~~~{.plantuml include-code="PlantUML/simple.plantuml"}
+Test include self.
+~~~

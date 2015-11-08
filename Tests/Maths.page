@@ -1,0 +1,44 @@
+Math tests
+==========
+
+### Math example
+
+$$|\zeta - z - h| \leq \frac{1}{2} |\zeta - z|$$
+
+$$\alpha^2 + \sum_{i=1}^{i=n} i^3$$
+
+$$\frac{1}{\sqrt{2\pi}} \int \exp(-\frac{1}{2}x^2)dx = 1$$ 
+
+Inline math: $a = \frac{1}{\pi}$.
+
+$$\mathbb{R}$$
+
+$$\begin{bmatrix} 
+   \dfrac{\partial x_1}{\partial y_1} & \dfrac{\partial x_2}{\partial y_1} 
+\\ \dfrac{\partial x_1}{\partial y_2} & \dfrac{\partial x_2}{\partial y_2}  
+\end{bmatrix}$$
+
+$$\leftrightarrow$$
+
+$$e^{i \pi} + 1 = 0$$
+
+---------------------------------
+
+### Math example 2
+
+
+$a^2 + b^2 = c^2$
+
+$v(t) = v_0 + \frac{1}{2}at^2$
+
+$\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}$  
+
+$\exists x \forall y (Rxy \equiv Ryx)$
+
+$p \wedge q \models p$
+
+$\Box\diamond p\equiv\diamond p$
+
+$\int_{0}^{1} x dx = \left[ \frac{1}{2}x^2 \right]_{0}^{1} = \frac{1}{2}$
+
+$e^x = \sum_{n=0}^\infty \frac{x^n}{n!} = \lim_{n\rightarrow\infty} (1+x/n)^n$

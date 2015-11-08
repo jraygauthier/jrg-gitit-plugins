@@ -1,0 +1,13 @@
+Including Maths.page
+====================
+
+~~~{include="Maths.page" type="markdown"}
+Test
+~~~
+
+Including Ditaa.page
+====================
+
+~~~{include="Ditaa.page" type="markdown"}
+Test
+~~~

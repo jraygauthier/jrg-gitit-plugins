@@ -1,0 +1,18 @@
+Tests
+=========
+
+## Plugins
+
+ -  [PlantUML]()
+ -  [Ditaa]()
+ -  [Dot]()
+ -  [IncludeAsCodeBlock]()
+ -  [IncludeDoc]()
+ -  [HsDiagrams]()
+
+## Functionalities
+
+ -  [SyntaxHighlighting]()
+ -  [Images]()
+ -  [Maths]()
+ -  [MediaWikiInput]()

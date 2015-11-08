@@ -1,0 +1,7 @@
+@startuml
+
+title Using relative uri
+
+Bob -> Alice : hello
+
+@enduml 

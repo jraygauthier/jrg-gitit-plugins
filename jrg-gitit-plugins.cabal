@@ -1,0 +1,48 @@
+name:                 jrg-gitit-plugins
+version:              0.0.0.0
+Cabal-version:        >= 1.8
+build-type:           Simple
+
+category:             Network
+license:              GPL
+license-file:         LICENSE
+
+Source-repository head
+  type:           git
+  location:       git://github.com/jraygauthier/jrg-gitit-plugins.git
+
+Library
+  exposed-modules:    Network.Gitit.PluginsJRG,
+                      Network.Gitit.Plugins.Ditaa,
+                      Network.Gitit.Plugins.Dot,
+                      Network.Gitit.Plugins.GnuPlot,
+                      Network.Gitit.Plugins.HsDiagrams,
+                      Network.Gitit.Plugins.ImgTex,
+                      Network.Gitit.Plugins.IncludeAsCodeBlock,
+                      --Network.Gitit.Plugins.IncludeDoc,
+                      Network.Gitit.Plugins.PlantUML,
+                      Network.Gitit.Plugins.ShowUser,
+                      Network.Gitit.Plugins.Signature
+
+  hs-source-dirs:     src
+  build-depends:      base >=3 && < 5,
+                      gitit,
+                      mtl,
+                      hslogger,
+                      bytestring,
+                      utf8-string,
+                      directory,
+                      network-uri >= 2.6 && < 2.7, 
+                      network >= 2.6
+
+  build-depends:      process,
+                      SHA,
+                      filepath,
+                      pandoc >= 1.12.4 && < 1.16,
+                      pandoc-types >= 1.12.3 && < 1.13,
+                      filestore >= 0.6 && < 0.7,
+                      datetime
+
+  extensions:         CPP
+  ghc-options:        -Wall -threaded
+  ghc-prof-options:   -fprof-auto-exported -rtsopts

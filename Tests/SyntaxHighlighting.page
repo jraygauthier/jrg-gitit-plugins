@@ -1,0 +1,68 @@
+Syntax highlighting tests
+=========================
+
+### Test simple C++ syntax highligting
+~~~ {.cpp}
+template <typename MyT1, class MyT2>
+void templateFn (const MyT1& value1, MyT2& value2)
+{
+    cout << "Value1" << value1 << endl 
+         << "Value2" << value2;
+}
+
+~~~
+
+See [pandoc-syntax-highlighting-css](https://benjeffrey.com/pandoc-syntax-highlighting-css) for how to add new styles.
+
+Note that QtCreator also uses KDE highlighting kate, so we most likely could reproduce exactly their style.
+
+Page break4
+
+------------------
+
+### Test complex C++ syntax highligting
+~~~ {.cpp}
+
+#include <vector>
+#include <pragma/nucleus.h>
+
+struct ExitPoints;
+struct FocalLawBuilder;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// @brief  This is meant to be a full fledged sequencer program (yet to be send to HW/FPGA) as
+///         produced by a Sequencer's setupFor* methods.
+///
+///     TODO:   A program should include in addition to FLs, all parameters that will be sent
+///             to HW/FPGA.
+///
+///     TODO:   Would it be useful to generalize so that we can move this to ungavalib and reuse
+///             for other PAUT HW? See SequencerFocalLaw's policy/host approach.
+///
+/// @see Sequencer
+/// @see SequencerFocalLaws
+///
+class Impl : public Base
+{
+
+template <typename MyT1, class MyT2>
+void templateFn (const MyT1& value1, MyT2& value2);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// @brief Hack for accessing msleep from QThread protected interface.
+///     Replace by C++11 std::this_thread::sleep_for as soon as possible.
+///
+bool getExitPoints(ExitPoints& pts, FocalLawBuilder& flBuilder) const
+{
+    const int myNumber = 2000;
+    double test = 0.4444;
+
+    anotherFn(myNumber);
+
+    templateFn<float>(test);
+
+    return false;
+}
+
+};
+~~~

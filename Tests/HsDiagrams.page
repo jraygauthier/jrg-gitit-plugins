@@ -1,0 +1,28 @@
+With name default type
+----------------------
+
+~~~ {.hsdiagrams name="haskell_diagram1"}
+dia = circle 1
+~~~
+
+Without name default type
+-------------------------
+
+~~~ {.hsdiagrams}
+dia = square 2
+~~~
+
+Png type
+--------
+
+~~~ {.hsdiagrams type="png"}
+dia = triangle 2
+~~~
+
+Svg type
+--------
+
+~~~ {.hsdiagrams type="svg"}
+dia = hexagon 2 ||| triangle 2
+~~~
+

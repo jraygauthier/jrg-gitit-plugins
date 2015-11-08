@@ -1,0 +1,86 @@
+PlantUML tests
+==============
+
+
+### Plant UML hello world
+~~~ {.plantuml name="relResult"}
+@startuml
+
+title Using relative uri
+
+Bob -> Alice : hello
+
+@enduml 
+~~~
+
+
+
+~~~ {.plantuml name="/tests/absResult"}
+@startuml
+
+
+title Using absolute uri
+
+Bob -> Alice : hello
+
+@enduml 
+~~~
+
+~~~ {.plantuml name="svgFile" type="svg"}
+@startuml
+
+title Using svg file
+
+Bob -> Alice : hello
+
+@enduml 
+~~~
+
+### SVG with auto-expand class
+
+~~~ {#my-diagram-id .plantuml .auto-expand type="svg"}
+@startuml
+
+title Using svg file
+
+Bob -> Alice : hello
+
+@enduml 
+~~~
+
+### Plant UML dot plugin
+~~~ {.plantuml}
+@startdot
+digraph foo {
+  node [style=rounded]
+  node1 [shape=box]
+  node2 [fillcolor=yellow, style="rounded,filled", shape=diamond]
+  node3 [shape=record, label="{ a | b | c }"]
+
+  node1 -> node2 -> node3
+}
+@enddot
+~~~
+
+### Plant UML ditaa plugin
+~~~ {.plantuml-comment-out}
+@startditaa
++--------+   +-------+    +-------+
+|        +---+ ditaa +--> |       |
+|  Text  |   +-------+    |diagram|
+|Document|   |!magic!|    |       |
+|     {d}|   |       |    |       |
++---+----+   +-------+    +-------+
+    :                         ^
+    |       Lots of work      |
+    +-------------------------+
+
+@endditaa
+~~~
+
+Does not seem to work. Could it be that either:
+
+ -  PlantUML does not support the class path way of using ditaa and must 
+    find ditaa in the PATH?
+ -  Could it be that we need to pass the -txt command line option to 
+    enable this?
