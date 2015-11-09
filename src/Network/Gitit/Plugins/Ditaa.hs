@@ -23,6 +23,8 @@ module Network.Gitit.Plugins.Ditaa (plugin) where
      -  add ditaa.jar to the CLASSPATH environment variable.
          -  e.g. (Windows): set CLASSPATH=C:\My\AbsPath\To\Jar\Files\ditaa.jar;%CLASSPATH%
          -  e.g. (Unix): export CLASSPATH=/My/AbsPath/To/Jar/Files/ditaa.jar:%CLASSPATH%
+     -  We also assume an executable wrapper that will properly handle
+        calls in the form `ditaa myArguments`.
 
     The generated png file will be saved in the static img directory.
     If no name is specified, a unique name will be generated from a hash
@@ -59,10 +61,9 @@ transformBlock (CodeBlock (_, classes, namevals) contents) | "ditaa" `elem` clas
         withSystemTempFile "ditaa.txt" $ \contentFilePath hf -> do
             hPutStr hf contents
             hClose hf
-            readProcessWithExitCode "java" ["org.stathissideris.ascii2image.core.CommandLineConverter", 
-                                            "-o",
-                                            contentFilePath,
-                                            staticDir cfg </> "img" </> outfile] ""
+            readProcessWithExitCode "ditaa" ["-o",
+                                             contentFilePath,
+                                             staticDir cfg </> "img" </> outfile] ""
     
     if ec == ExitSuccess
         then return $ Para [Image name ("/img/" ++ outfile, "")]

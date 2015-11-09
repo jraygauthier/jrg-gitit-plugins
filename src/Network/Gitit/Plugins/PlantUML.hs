@@ -19,6 +19,8 @@ module Network.Gitit.Plugins.PlantUML (plugin) where
          -  e.g. (Unix): export CLASSPATH=/My/AbsPath/To/Jar/Files/plantuml.jar:%CLASSPATH%
      -  The "dot" executable must be in the path. 
         See: http://www.graphviz.org/Download.php
+     -  We also assume an executable wrapper that will properly handle
+        calls in the form `plantuml myArguments`.
     The generated png file will be saved in the static img directory.
     If no name is specified, a unique name will be generated from a hash
     of the file contents.
@@ -96,8 +98,8 @@ transformBlock (CodeBlock (id, classes, namevals) contents) | "plantuml" `elem` 
                                     Nothing -> ([], "unnamed/" ++ 
                                                         uniqueName contents ++ outExt)
 
-        exeName = "java"
-        args = ["net.sourceforge.plantuml.Run", "-pipe"] ++ ftParams 
+        exeName = "plantuml"
+        args = ["-pipe"] ++ ftParams 
 
         handledAttrs = ["type", "name"]
         unhandledAttrs = filter (\e -> not (elem (fst e) handledAttrs)) namevals
