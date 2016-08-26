@@ -110,7 +110,7 @@ transformBlock (CodeBlock (id, classes, namevals) contents) | "hsdiagrams" `elem
         if ec == ExitSuccess && "" == stderr && "" == stdout
             then 
               let 
-                imgInline = Image name ("/img/" ++ outfile, "")
+                imgInline = Image nullAttr name ("/img/" ++ outfile, "")
                 imgBlock = Para [Span (id, unhandledClasses, unhandledAttrs) [imgInline]]
               in
                 return $ imgBlock

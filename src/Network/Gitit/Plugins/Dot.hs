@@ -35,7 +35,7 @@ transformBlock (CodeBlock (_, classes, namevals) contents) | "dot" `elem` classe
     (ec, _out, err) <- readProcessWithExitCode "dot" ["-Tpng", "-o",
                          staticDir cfg </> "img" </> outfile] contents
     if ec == ExitSuccess
-       then return $ Para [Image name ("/img/" ++ outfile, "")]
+       then return $ Para [Image nullAttr name ("/img/" ++ outfile, "")]
        else error $ "dot returned an error status: " ++ err
 transformBlock x = return x
 

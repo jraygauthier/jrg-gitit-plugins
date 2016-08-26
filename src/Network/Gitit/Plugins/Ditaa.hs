@@ -66,7 +66,7 @@ transformBlock (CodeBlock (_, classes, namevals) contents) | "ditaa" `elem` clas
                                              staticDir cfg </> "img" </> outfile] ""
     
     if ec == ExitSuccess
-        then return $ Para [Image name ("/img/" ++ outfile, "")]
+        then return $ Para [Image nullAttr name ("/img/" ++ outfile, "")]
         else error $ "ditaa returned an error status: " ++ err
 transformBlock x = return x
 

@@ -38,8 +38,8 @@ Library
   build-depends:      process,
                       SHA,
                       filepath,
-                      pandoc >= 1.12.4 && < 1.16,
-                      pandoc-types >= 1.12.3 && < 1.13,
+                      pandoc >= 1.12.4 && < 1.18,
+                      pandoc-types >= 1.12.3 && < 1.17,
                       filestore >= 0.6 && < 0.7,
                       datetime
 
