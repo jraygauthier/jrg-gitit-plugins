@@ -21,8 +21,8 @@ Library
                       Network.Gitit.Plugins.IncludeAsCodeBlock,
                       --Network.Gitit.Plugins.IncludeDoc,
                       Network.Gitit.Plugins.PlantUML,
-                      Network.Gitit.Plugins.ShowUser,
-                      Network.Gitit.Plugins.Signature
+                      Network.Gitit.Plugins.ShowUser
+                      --Network.Gitit.Plugins.Signature
 
   hs-source-dirs:     src
   build-depends:      base >=3 && < 5,
@@ -38,11 +38,10 @@ Library
   build-depends:      process,
                       SHA,
                       filepath,
-                      pandoc >= 1.12.4 && < 1.18,
-                      pandoc-types >= 1.12.3 && < 1.17,
-                      filestore >= 0.6 && < 0.7,
-                      datetime
+                      pandoc >= 1.12.4 && < 1.20,
+                      pandoc-types >= 1.12.3 && < 1.18,
+                      filestore >= 0.6 && < 0.7
 
   extensions:         CPP
-  ghc-options:        -Wall -threaded
-  ghc-prof-options:   -fprof-auto-exported -rtsopts
+  ghc-options:        -Wall
+  ghc-prof-options:   -fprof-auto-exported

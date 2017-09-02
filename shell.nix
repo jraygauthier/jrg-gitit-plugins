@@ -4,7 +4,7 @@ let
 
   inherit (nixpkgs) pkgs;
 
-  f = { mkDerivation, base, bytestring, datetime, directory
+  f = { mkDerivation, base, bytestring, directory
       , filepath, filestore, gitit, hslogger, mtl, network, network-uri
       , pandoc, pandoc-types, process, SHA, stdenv, utf8-string
       }:
@@ -13,7 +13,7 @@ let
         version = "0.0.0.0";
         src = ./.;
         libraryHaskellDepends = [
-          base bytestring datetime directory filepath filestore gitit
+          base bytestring directory filepath filestore gitit
           hslogger mtl network network-uri pandoc pandoc-types process SHA
           utf8-string
         ];

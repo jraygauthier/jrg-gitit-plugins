@@ -11,7 +11,7 @@ import qualified Network.Gitit.Plugins.IncludeAsCodeBlock as IncludeAsCodeBlock
 --import qualified Network.Gitit.Plugins.IncludeDoc as IncludeDoc
 import qualified Network.Gitit.Plugins.PlantUML as PlantUML
 import qualified Network.Gitit.Plugins.ShowUser as ShowUser
-import qualified Network.Gitit.Plugins.Signature as Signature
+--import qualified Network.Gitit.Plugins.Signature as Signature
 
 plugins :: [Plugin]
 plugins = [
@@ -23,5 +23,5 @@ plugins = [
   IncludeAsCodeBlock.plugin,
   --IncludeDoc.plugin,
   PlantUML.plugin,
-  ShowUser.plugin,
-  Signature.plugin]
+  ShowUser.plugin  {-,
+  Signature.plugin-}]
